@@ -183,6 +183,6 @@ class LinkParser():
             data_parser.parseExpotvVideoData(video_url)
         elif 'gubb.tv' in video_url:
             (video_title, download_url) = \
-            data_parser.parseExpotvVideoData(video_url)
+            data_parser.parseGubbtvVideoData(video_url)
 
         return (self.__replaceHtmlEntities(video_title), download_url)
