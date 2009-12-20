@@ -725,7 +725,6 @@ class VideoDataParser():
             Returns:
                 video_title: string, download_url: string
         '''
-        'http://vbox7.com/play:fea68bee&al=1&vid='
         video_id = video_url.split('play:')[1][0:8]
         request = urlopen(video_url).read()
         video_title = request.split('titlenew">')[1].split('</span>')[0]
