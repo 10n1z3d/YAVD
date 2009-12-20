@@ -750,3 +750,19 @@ class VideoDataParser():
         download_url = 'http://newmedia.aniboom.com/http/%s.flv' % video_id
 
         return (video_title, download_url)
+
+    def parseExpotvVideoData(self, video_url):
+        '''Parses and returns the video title and download url of Expotv.com
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        request = urlopen(video_url).read()
+        video_title = request.split('title: "')[1].split('",')[0]
+        download_url = request.split('url: "')[2].split('",')[0]
+
+        return (video_title, download_url)
