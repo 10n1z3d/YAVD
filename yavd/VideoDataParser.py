@@ -21,6 +21,7 @@
 # It took me some time to reverse some of the websites...
 
 from urllib import unquote
+from urllib import urlencode
 from urllib2 import urlopen
 
 class VideoDataParser():
@@ -713,4 +714,23 @@ class VideoDataParser():
         download_url = request2.split('<File>')[1].split('</File>')[0]
 
         return (video_title, download_url)
-        
+
+    def parseVbox7VideoData(self, video_url):
+        '''Parses and returns the video title and download url of Vbox7.com
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        'http://vbox7.com/play:fea68bee&al=1&vid='
+        video_id = video_url.split('play:')[1][0:8]
+        request = urlopen(video_url).read()
+        video_title = request.split('titlenew">')[1].split('</span>')[0]
+        post_data = urlencode({'onLoad': '[type Function]', 'vid' : video_id})
+        request2 = urlopen('http://www.vbox7.com/play/magare.do', post_data).read()
+        download_url = request2.split('&videoFile=')[1].split('&')[0]
+
+        return (video_title, download_url)
