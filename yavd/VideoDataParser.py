@@ -782,3 +782,20 @@ class VideoDataParser():
         download_url = request.split('"file=')[1].split('&wmode=')[0]
 
         return (video_title, download_url)
+
+    def parseNaroiaciVideoData(self, video_url):
+        '''Parses and returns the video title and download url of Na-roiaci.com
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        request = urlopen(video_url).read()
+        video_title = request.split('id="viewvideo-title">')[1].split('</div>')[0]
+        video_title = video_title.replace('  ', '')
+        download_url = request.split('&flv=')[1].split('&autostart=')[0]
+
+        return (video_title, download_url)
