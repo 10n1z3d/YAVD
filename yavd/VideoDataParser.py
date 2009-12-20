@@ -733,3 +733,20 @@ class VideoDataParser():
         download_url = request2.split('&videoFile=')[1].split('&')[0]
 
         return (video_title, download_url)
+
+    def parseAniboomVideoData(self, video_url):
+        '''Parses and returns the video title and download url of Aniboom.com
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        video_id = video_url.split('video/')[1].split('/')[0]
+        request = urlopen(video_url).read()
+        video_title = request.split('<title>Watch ')[1].split(' ')[0]
+        download_url = 'http://newmedia.aniboom.com/http/%s.flv' % video_id
+
+        return (video_title, download_url)
