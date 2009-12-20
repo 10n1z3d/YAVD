@@ -56,118 +56,118 @@ class LinkParser():
                 video_title: string
                 download_url: string
         '''
-        parser = VideoDataParser()
+        data_parser = VideoDataParser()
 
         if 'youtube.com' in video_url:
             (video_title, download_url) = \
-            parser.parseYouTubeVideoData(video_url)
+            data_parser.parseYouTubeVideoData(video_url)
         elif 'metacafe.com' in video_url:
             (video_title, download_url) = \
-            parser.parseMetacafeVideoData(video_url)
+            data_parser.parseMetacafeVideoData(video_url)
         elif 'break.com' in video_url:
             (video_title, download_url) = \
-            parser.parseBreakVideoData(video_url)
+            data_parser.parseBreakVideoData(video_url)
         elif 'dailymotion.com' in video_url:
             (video_title, download_url) = \
-            parser.parseDailymotionVideoData(video_url)
+            data_parser.parseDailymotionVideoData(video_url)
         elif 'streetfire.net' in video_url:
             (video_title, download_url) = \
-            parser.parseStreetFireVideoData(video_url)
+            data_parser.parseStreetFireVideoData(video_url)
         elif 'video.google.com' in video_url:
             (video_title, download_url) = \
-            parser.parseGoogleVideoData(video_url)
+            data_parser.parseGoogleVideoData(video_url)
         elif 'clipfish.de' in video_url:
             (video_title, download_url) = \
-            parser.parseClipfishVideoData(video_url)
+            data_parser.parseClipfishVideoData(video_url)
         elif 'disclose.tv' in video_url:
             (video_title, download_url) = \
-            parser.parseDiscloseVideoData(video_url)
+            data_parser.parseDiscloseVideoData(video_url)
         elif 'ebaumsworld.com' in video_url:
             (video_title, download_url) = \
-            parser.parseEbaumsworldVideoData(video_url)
+            data_parser.parseEbaumsworldVideoData(video_url)
         elif 'funnyjunk.com' in video_url:
             (video_title, download_url) = \
-            parser.parseFunnyjunkVideoData(video_url)
+            data_parser.parseFunnyjunkVideoData(video_url)
         elif 'liveleak.com' in video_url:
             (video_title, download_url) = \
-            parser.parseLiveleakVideoData(video_url)
+            data_parser.parseLiveleakVideoData(video_url)
         elif 'rutube.ru' in video_url:
             (video_title, download_url) = \
-            parser.parseRutubeVideoData(video_url)
+            data_parser.parseRutubeVideoData(video_url)
         elif 'dtrailer.com' in video_url:
             (video_title, download_url) = \
-            parser.parseDtrailerVideoData(video_url)
+            data_parser.parseDtrailerVideoData(video_url)
         elif '5min.com' in video_url:
             (video_title, download_url) = \
-            parser.parse5minVideoData(video_url)
+            data_parser.parse5minVideoData(video_url)
         elif 'blip.tv' in video_url:
             (video_title, download_url) = \
-            parser.parseBlipVideoData(video_url)
+            data_parser.parseBlipVideoData(video_url)
         elif 'bofunk.com' in video_url:
             (video_title, download_url) = \
-            parser.parseBofunkVideoData(video_url)
+            data_parser.parseBofunkVideoData(video_url)
         elif 'vids.myspace.com' in video_url:
             (video_title, download_url) = \
-            parser.parseMyspaceVideoData(video_url)
+            data_parser.parseMyspaceVideoData(video_url)
         elif 'graspr.com' in video_url:
             (video_title, download_url) = \
-            parser.parseGrasprVideoData(video_url)
+            data_parser.parseGrasprVideoData(video_url)
         elif 'teachertube.com' in video_url:
             (video_title, download_url) = \
-            parser.parseTeachertubeVideoData(video_url)
+            data_parser.parseTeachertubeVideoData(video_url)
         elif 'jokeroo.com' in video_url:
             (video_title, download_url) = \
-            parser.parseJokerooVideoData(video_url)
+            data_parser.parseJokerooVideoData(video_url)
         elif 'sevenload.com' in video_url:
             (video_title, download_url) = \
-            parser.parseSevenloadVideoData(video_url)
+            data_parser.parseSevenloadVideoData(video_url)
         elif 'funnyordie.com' in video_url:
             (video_title, download_url) = \
-            parser.parseFunnyordieVideoData(video_url)
+            data_parser.parseFunnyordieVideoData(video_url)
         elif 'shredordie.com' in video_url:
             (video_title, download_url) = \
-            parser.parseShredordieVideoData(video_url)
+            data_parser.parseShredordieVideoData(video_url)
         elif 'greatamericans.com' in video_url:
             (video_title, download_url) = \
-            parser.parseGreatamericansVideoData(video_url)
+            data_parser.parseGreatamericansVideoData(video_url)
         elif 'videowebtown.com' in video_url:
             (video_title, download_url) = \
-            parser.parseVideowebtownVideoData(video_url)
+            data_parser.parseVideowebtownVideoData(video_url)
         elif 'snotr.com' in video_url:
             (video_title, download_url) = \
-            parser.parseSnotrVideoData(video_url)
+            data_parser.parseSnotrVideoData(video_url)
         elif 'jwak.net' in video_url:
             (video_title, download_url) = \
-            parser.parseJwakVideoData(video_url)
+            data_parser.parseJwakVideoData(video_url)
         elif 'worldstarhiphop.com' in video_url:
             (video_title, download_url) = \
-            parser.parseWorldstarthiphopVideoData(video_url)
+            data_parser.parseWorldstarthiphopVideoData(video_url)
         elif 'tinyclips.net' in video_url:
             (video_title, download_url) = \
-            parser.parseTinyclipsVideoData(video_url)
+            data_parser.parseTinyclipsVideoData(video_url)
         elif 'shockinghumor.com' in video_url:
             (video_title, download_url) = \
-            parser.parseShockinghumorVideoData(video_url)
+            data_parser.parseShockinghumorVideoData(video_url)
         elif 'boomclips.com' in video_url:
             (video_title, download_url) = \
-            parser.parseBoomclipsVideoData(video_url)
+            data_parser.parseBoomclipsVideoData(video_url)
         elif 'livevideo.com' in video_url:
             (video_title, download_url) = \
-            parser.parseLivevideoVideoData(video_url)
+            data_parser.parseLivevideoVideoData(video_url)
         elif 'wegame.com' in video_url:
             (video_title, download_url) = \
-            parser.parseWegameVideoData(video_url)
+            data_parser.parseWegameVideoData(video_url)
         elif 'kontraband.com' in video_url:
             (video_title, download_url) = \
-            parser.parseKontrabandVideoData(video_url)
+            data_parser.parseKontrabandVideoData(video_url)
         elif 'clipshack.com' in video_url:
             (video_title, download_url) = \
-            parser.parseClipshackVideoData(video_url)
+            data_parser.parseClipshackVideoData(video_url)
         elif 'linux.com' in video_url:
             (video_title, download_url) = \
-            parser.parseLinuxVideoData(video_url)
+            data_parser.parseLinuxVideoData(video_url)
         elif 'veryangrytoad.com' in video_url:
             (video_title, download_url) = \
-            parser.parseVeryAngryToadVideoData(video_url)
+            data_parser.parseVeryAngryToadVideoData(video_url)
 
         return (self.__replaceHtmlEntities(video_title), download_url)
