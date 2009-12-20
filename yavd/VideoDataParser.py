@@ -692,5 +692,25 @@ class VideoDataParser():
         video_title = request.split('"mainBoxHeader">')[1].split('</h1>')[0]
         download_url = ('http://www.veryangrytoad.com/flvideo/' +
                         video_url.split('/')[-2] + '.flv')
+        
+        return (video_title, download_url)
+
+    def parseMonkeySeeVideoData(self, video_url):
+        '''Parses and returns the video title and download url of Monkeysee.com
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        request = urlopen(video_url).read()
+        video_title = request.split('<h1>')[1].split('</h1>')[0]
+        config = 'http://www.monkeysee.com/%s' % \
+        request.split('("video_id", "')[1].split('");')[0]
+        request2 = urlopen(unquote(config)).read()
+        download_url = request2.split('<File>')[1].split('</File>')[0]
 
         return (video_title, download_url)
+        
