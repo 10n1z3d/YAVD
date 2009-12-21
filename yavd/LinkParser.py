@@ -187,5 +187,11 @@ class LinkParser():
         elif 'na-roiaci.com' in video_url:
             (video_title, download_url) = \
             data_parser.parseNaroiaciVideoData(video_url)
+        elif 'clipjunkie.com' in video_url:
+            (video_title, download_url) = \
+            data_parser.parseClipjunkieVideoData(video_url)
+        elif 'video.data.bg' in video_url:
+            (video_title, download_url) = \
+            data_parser.parseDataBGVideoData(video_url)
 
         return (self.__replaceHtmlEntities(video_title), download_url)

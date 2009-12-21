@@ -22,7 +22,7 @@ import sys
 import urllib
 
 class VideoDownloader():
-    '''The main class used for downloading the videos from the website.'''
+    '''The main class used for downloading the videos from the websites.'''
     def __showProgress(self, blocks, block_size, total_size, bar_width=40):
         '''Simple progress bar function.
 

@@ -150,9 +150,9 @@ class VideoDataParser():
                 video_title: string, download_url: string
         '''
         request = urlopen(video_url).read()
-        download_url = request.split('&file=')[1].split('&image=')[0]
-        video_title = request.split('<h1 class="viewpagettl">')[1].split('</h1>')[0]
-
+        video_title = request.split('"viewpagettl_video">')[1].split('</span>')[0]
+        download_url = request.split('&file=')[1].split('&')[0]
+        
         return (video_title, download_url)
 
     def parseClipfishVideoData(self, video_url):
