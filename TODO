@@ -1,7 +1,6 @@
-TODO list for the final version (1.0):
+TODO list for the next version (1.0):
 
 -Add Youtube HD video download support
 -Add Dailymotion HD video download suport
 -Add Vimeo video download support
 -Add Some console color
--Replace hardcoded things with regex
