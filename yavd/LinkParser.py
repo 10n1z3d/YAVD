@@ -29,18 +29,18 @@ class LinkParser():
         Returns:
             video_title: string The unescaped video title.
         '''
-        map = {'&quot;': '"',
-               '&apos;': "'",
-               '&amp;': '&',
-               '&gt;': '',
-               '&lt;': '',
-               '|': '',
-               '\t': '',
-               '\n': '',
-               '\r': ''
-              }
+        ent_map = {'&quot;': '"',
+                   '&apos;': "'",
+                   '&amp;': '&',
+                   '&gt;': '',
+                   '&lt;': '',
+                   '|': '',
+                   '\t': '',
+                   '\n': '',
+                   '\r': ''
+                  }
 
-        for esc, unesc in map.iteritems():
+        for esc, unesc in ent_map.iteritems():
             video_title = video_title.replace(esc, unesc)
 
         return video_title
