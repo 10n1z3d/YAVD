@@ -799,3 +799,19 @@ class VideoDataParser():
         download_url = request.split('&flv=')[1].split('&autostart=')[0]
 
         return (video_title, download_url)
+
+    def parseAnimeFreakVideoData(self, video_url):
+        '''Parses and returns the video title and download url of Animefreak.tv
+        video.
+
+            Args:
+                url: string
+
+            Returns:
+                video_title: string, download_url: string
+        '''
+        request = urlopen(video_url).read()
+        video_title = request.split('<h1>')[1].split('</h1>')[0]
+        download_url = request.split('.xml&file=')[1].split('&image=')[0]
+        
+        return (video_title, download_url)

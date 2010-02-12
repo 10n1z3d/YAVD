@@ -193,5 +193,8 @@ class LinkParser():
         elif 'video.data.bg' in video_url:
             (video_title, download_url) = \
             data_parser.parseDataBGVideoData(video_url)
+        elif 'animefreak.tv' in video_url:
+            (video_title, download_url) = \
+            data_parser.parseAnimeFreakVideoData(video_url)
 
         return (self.__replaceHtmlEntities(video_title), download_url)
